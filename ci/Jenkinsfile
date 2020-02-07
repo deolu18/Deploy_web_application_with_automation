@@ -1,0 +1,13 @@
+node {
+    checkout scm
+    def workloadPipeline = load("workloadPipeline.groovy")
+    def accountName = ""
+    def componentName = "wordpress"
+    def target = "deploy-${componentName}-apply"
+
+    workloadPipeline(accountName, componentName, target)
+}
+
+
+// then in the jenkins UI, in the Pipeline section of Configure, I would point the script path to the exact path in my repository and add the repository and branch
+// the definition would be: Pipeline script from SCM
