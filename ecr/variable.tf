@@ -2,7 +2,7 @@ variable region{
   default = "eu-west-1"
 }
 variable account_number{
-  default = "615196324256"
+  default = ""
 }
 variable ecr_image_repo_name{
   default = "adeoluwordpress"
